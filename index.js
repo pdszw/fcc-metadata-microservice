@@ -5,7 +5,7 @@ var path = require('path');
 var multer = require('multer');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var diskStorage = multer.diskStorage({
     destination: function (req,file,cb) {
